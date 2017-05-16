@@ -1,0 +1,169 @@
+<html lang="it-IT" dir="ltr">
+	<head>
+		<title>Compro Oro | Simply Gold Srl</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="canonical" href="http://www.comprooro-ok.it/">
+		<link rel="stylesheet" href="indexoro.css">
+	</head>
+	<body id="dummybodyid">
+		<div id="sidebar-a" class="grid-box">
+			<div class="grid-box width100 grid-v">
+				<div class="module mod-box mod-box-grey deepest"> 
+					<div class="badge badge-live"></div> 
+					<h3>Quotazioni </h3>
+					<!-- BOX PREZZO -->
+					<div class="boxoro"> 
+						<span class="intestazioneoro">Oro 24K</span>
+						<span id="24kz" class="goldi">32.88</span> 
+						/gr
+						<br>
+						<span class="intestazioneoro">Oro 18K</span>
+						<span id="18kz" class="goldi">23.97</span>
+						/gr
+						<br>
+						<span class="intestazioneoro">Oro 14K</span>
+						<span id="14kz" class="goldi">18.55</span> 
+						/gr
+					</div> 
+					<div class="boxargento"> 
+						<span class="intestazioneargento">Argento 999</span>
+						<span id="999kz" class="silvi">337</span> /kg<br>
+						<span class="intestazioneargento">Argento 925</span>
+						<span id="925kz" class="silvi">283</span> /kg<br>
+						<span class="intestazioneargento">Argento 800</span>
+						<span id="800kz" class="silvi">229</span> /kg
+					</div> 
+					<!-- FISSA IL PREZZO -->
+					<div class="fissaprezzo">
+						<a href="fissa-prezzo-nuovo.html" target="_blank">
+							<button id="fissaoro">
+								FISSA IL PREZZO
+								<br>
+								PER 24 ORE
+							</button>
+						</a>
+					</div> 
+					<!--  QUOTAZIONE MONETE ORO -->
+					<p id="quotazionemonete">
+						<b>
+							<a href="http://www.quotazionemoneteoro.it/" target="_blank">Quotazione monete oro
+							</a>
+						</b>
+					</p> 
+				</div>
+			</div>
+
+			<!-- VALUTA IL TUO ORO -->
+
+			<div class="grid-box width100 grid-v">
+				<div class="module mod-box deepest"> 
+
+					<!-- QUOTAZIONE ORO -->
+					<div id="quotazionioro"> 
+						<h3>Valuta il tuo oro</h3> 
+						<p style="padding-left:7px; clear:both;">
+							Grammi 
+							<input style="text-align:center; margin-left:20px;" type="text" placeholder="Esempio 75" name="grammioro" onkeyup="calculation()" id="grammioro" size="10">
+						</p> 
+						<p style="padding-left:7px;">
+							Caratura 
+							<select style="width:84px; margin-left:13px;" onchange="calcolo(); calculation()" name="caratura" size="1" id="caraturaz">
+								<option value="24">
+								Oro 24K
+								</option>
+								<option value="18" selected="selected">
+								Oro 18K
+								</option>
+								<option value="14">
+								Oro 14K
+								</option>
+							</select>
+						</p> 
+						<div style="padding-left:7px; height:25px;">
+							<strong>
+							Valutazione €
+							</strong> 
+							<span id="risultatovalutazione" style="height:20px; width:40px;"></span>
+						</div> 
+					</div> 
+
+					<!-- SCRIPT ORO -->
+					<script>
+						var sceltaoro = 18;
+						var giusta = "18kz";
+						function calcolo() {
+						var xz = document.getElementById('caraturaz');
+						sceltaoro = xz.options[xz.selectedIndex].value;
+						}
+						function calculation() {
+						if (sceltaoro==24){giusta = "24kz";}
+						else if (sceltaoro==18){giusta = "18kz";}
+						else if (sceltaoro==14){giusta = "14kz";}
+						else {}
+						var quotation = document.getElementById(giusta).innerHTML;
+						var inputBox = document.getElementById('grammioro').value;
+						inputBox = inputBox.replace(/\,/,".");
+						var finale = inputBox * quotation;
+						finale = finale.toFixed(2);
+						document.getElementById('risultatovalutazione').innerHTML = finale;
+						}
+					</script>
+
+					<hr> 
+
+					<!-- QUOTAZIONE ARGENTO -->
+					<div id="quotazioniargento"> 
+						<h3>Valuta il tuo argento</h3> 
+						<p style="padding-left:7px; clear:both;">
+						Chilogrammi
+							<input style="text-align:center; margin-left:31px;" placeholder="Esempio: 2,5" type="text" name="grammiargento" onkeyup="calculationa()" id="grammiargento" size="12">
+						</p> 
+						<p style="padding-left:7px;">
+						Titolazione 
+							<select style="width:94px; margin-left:13px;" onchange="calcoloa(); calculationa()" name="caraturaargento" size="1" id="caraturazargento">
+								<option value="999">
+								Argento 999
+								</option>
+								<option value="925">
+								Argento 925
+								</option>
+								<option value="800">
+								Argento 800
+								</option>
+							</select>
+						</p> 
+						<div style="padding-left:7px; height:25px; ">
+							<strong>
+							Valutazione €
+							</strong> 
+							<span id="risultatovalutazioneargento" style="height:20px; width:40px;"></span>
+						</div> 
+					</div> 
+
+						<!-- SCRIPT ARGENTO -->
+					<script>
+						var sceltaargento = 999;
+						var giustaargento = "999kz";
+						function calcoloa() {
+						var xzy = document.getElementById('caraturazargento');
+						sceltaargento = xzy.options[xzy.selectedIndex].value;
+						}
+						function calculationa() {
+						if (sceltaargento==999){giustaargento = "999kz";}
+						else if (sceltaargento==925){giustaargento = "925kz";}
+						else if (sceltaargento==800){giustaargento = "800kz";}
+						else {}
+						var quotationargento = document.getElementById(giustaargento).innerHTML;
+						var inputBoxargento = document.getElementById('grammiargento').value;
+						inputBoxargento = inputBoxargento.replace(/\,/,".");
+						var finaleargento = inputBoxargento * quotationargento;
+						finaleargento = finaleargento.toFixed(2);
+						document.getElementById('risultatovalutazioneargento').innerHTML = finaleargento;
+						}
+					</script> 
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

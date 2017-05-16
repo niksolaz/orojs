@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Fissa il prezzo</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="indexoro.css">
+</head>
+<body id="dummybodyid">
+
+<h3 style="text-align:center; margin-left:auto; margin-right:auto;">
+	COLATA ORO
+</h3>
+<div><h2>Stampa la quotazione e bloccala per 24 ore</h2></div>
+
+<p>Blocca per 24 ore questa quotazione:</p>
+<p><script type="text/javascript">
+<!--
+var currentTime = new Date();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+var secondi = currentTime.getSeconds();
+var giorno =  currentTime.getDate();
+var mese = currentTime.getMonth();
+mese = mese + 1;
+var anno = currentTime.getFullYear();
+document.write("Quotazione verificata alle <strong>" + hours + ":" + minutes + ":" + secondi+" del "+giorno+"/"+mese+"/"+anno+"</strong>")
+var scadenza = new Date();
+scadenza.setHours(scadenza.getHours()+24);
+var hours2 = scadenza.getHours();
+var minutes2 = scadenza.getMinutes();
+var secondi2 = scadenza.getSeconds();
+var giorno2 =  scadenza.getDate();
+var mese2 = scadenza.getMonth();
+mese2 = mese2 + 1;
+var anno2 = scadenza.getFullYear();
+document.write("<br /><p style='border:3px solid #fdb813; padding-top:4px; padding-bottom:4px;'>Quotazione valida fino alle <strong>" + hours2 + ":" + minutes2 + ":" + secondi2+" del "+giorno2+"/"+mese2+"/"+anno2+"</strong></p>")
+
+</script>Quotazione verificata alle <strong>15:36:32 del 13/5/2017</strong><br></p><p style="border:3px solid #fdb813; padding-top:4px; padding-bottom:4px;">Quotazione valida fino alle <strong>15:36:32 del 14/5/2017</strong></p><p></p>
+<h3>Quotazioni </h3><div class="boxoro" style="padding-left:20px;">
+<span class="intestazioneoro">Oro 24K</span><span id="24kz" class="goldi">32.88</span> /gr<br><span class="intestazioneoro">Oro 18K</span><span id="18kz" class="goldi">23.97</span> /gr<br><span class="intestazioneoro">Oro 14K</span> <span id="14kz" class="goldi">18.55</span> /gr</div>
+
+<div style="padding-left:20px; color:#bdbd !important; padding-top:15px;" class="boxargento">
+<span class="intestazioneargento">Argento 999</span><span id="999kz" class="silvi">337</span> /kg<br><span class="intestazioneargento">Argento 925</span> <span id="925kz" class="silvi">283</span> /kg<br><span class="intestazioneargento">Argento 800</span> <span id="800kz" class="silvi">229</span> /kg</div>
+
+<p>Stampa questa pagina e blocca la tua quotazione!</p>
+
+<p> </p><form><input type="button" value="  Stampa la quotazione, clicca qui!  " onclick="window.print();return false;" id="stampa"></form> <p></p>
+
+
+</body>
+</html>

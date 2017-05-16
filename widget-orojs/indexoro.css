@@ -1,0 +1,68 @@
+#dummybodyid{
+	text-align:center; 
+	font-size:18px; 
+	width:400px; 
+	margin-left:auto; 
+	margin-right:auto; 
+	padding:10px; 
+	border:2px solid #bdbdbd; 
+	background-color: WhiteSmoke;
+}
+.grid-box{
+	background-color:WhiteSmoke;
+}
+
+.boxoro{
+	padding-left:20px;
+	background-color: goldenrod;
+}
+
+.boxargento{
+	padding-left:20px;
+	padding-top:15px;
+	background-color: goldenrod;
+}
+
+.fissaprezzo{
+	text-align:center;
+	 margin-top:5px; 
+	 padding-top:5px; 
+	 padding-bottom:5px;
+}
+
+#fissaoro{
+	background-color:SlateGray;
+	color:cornsilk;
+}
+
+#quotazionemonete{
+	text-align:center; 
+	margin:5px; 
+	padding-top:5px; 
+	padding-bottom:5px; 
+	background-color: goldenrod;
+}
+
+#risultatovalutazione{
+	background-color: goldenrod;
+	
+}
+
+#risultatovalutazioneargento{
+	background-color: goldenrod;
+}
+
+a{
+	color:DarkSlateGray;
+}
+
+#stampa{
+	text-align:center;
+	 margin-top:5px; 
+	 padding-top:5px; 
+	 padding-bottom:5px;
+	 background-color: SlateGray;
+	 color:cornsilk;
+}
+
+
